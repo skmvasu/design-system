@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+$base-font: $base-px * 4;
+
+.ds-text {
+    &.ds-text-size--default {
+        font-size: $base-font;
+    }
+    &.ds-text-size--sm {
+        font-size: $base-font - $base-px;
+    }
+    &.ds-text-size--lg {
+        font-size: $base-font + $base-px;
+    }
+    &strong, &.ds-text--semibold {
+        font-weight: 600;
+    }
+    &.ds-text--bold {
+        font-weight: 700;
+    }
+}
