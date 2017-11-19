@@ -1,0 +1,6 @@
+.flex {
+    display: flex;
+    &.flex-align-right > div:last-child {
+        margin-left: auto;
+    }
+}
