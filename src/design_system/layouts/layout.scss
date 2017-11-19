@@ -1,6 +1,51 @@
+@import '../../styles/variables.scss';
+$base-padding: $base-px * 2;
+
 .flex {
     display: flex;
     &.flex-align-right > div:last-child {
         margin-left: auto;
+    }
+}
+
+.ds-page {
+    border: 0px solid #333;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    &:not(.ds-page--fullwidth){
+        margin: 0 auto;
+        max-width: 960px;
+    }
+    &.ds-page--fullwidth {
+        max-width: 100%;
+        margin: 0 $base-px * 10;
+    }
+}
+
+.ds-box {
+    border-color: #f9f9f9;
+    border-style: solid;
+    text-align: left;
+    &.ds-box--fullwidth {
+        width: 100%;
+    }
+
+    &.ds-box-border--light {
+        border: 1px;
+    }
+    &.ds-box-border--thick {
+        border-width: $base-px;
+    }
+
+    &.ds-box--default {
+        padding: $base-padding;
+    }
+
+    &.ds-box--double-space {
+        padding: $base-padding * 2;
+    }
+
+    &.ds-box--default--no-space {
+        padding: 0;
     }
 }
