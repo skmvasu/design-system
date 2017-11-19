@@ -19,10 +19,10 @@ export const TextAlign = {
     justify: 'ds-text-align--justify'
 }
 
-export const Type = ({ tag = 'span', size = TextSize.default, boldness = TextBold.default, children, className, align=TextAlign.default}) => {
+export const Type = ({ tag = 'span', size= TextSize.default, boldness = TextBold.default, children, className='', align=TextAlign.default, ...rest}) => {
     const Tag = `${tag}`; 
-    const classNames = `ds-text ${size} ${boldness} ${align} ${className ? className : ''}`;
-    return <Tag className={classNames}>
+    const classNames = `ds-text ${size} ${boldness} ${align} ${className}`;
+    return <Tag className={classNames} {...rest}>
         {children}
     </Tag>
 };
