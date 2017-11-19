@@ -30,6 +30,10 @@ $base-padding: $base-px * 2;
         width: 100%;
     }
 
+    &.ds-box-border--default {
+        border: 0px;
+    }
+
     &.ds-box-border--light {
         border: 1px;
     }

@@ -13,9 +13,15 @@ export const TextBold = {
     bold: 'ds-text--bold'
 };
 
-export const Type = ({tag='span', size=TextSize.default, boldness=TextBold.default, children}) => {
+export const TextAlign = {
+    default: 'ds-text-align--default',
+    right: 'ds-text-align--right',
+    justify: 'ds-text-align--justify'
+}
+
+export const Type = ({ tag = 'span', size = TextSize.default, boldness = TextBold.default, children, className, align=TextAlign.default}) => {
     const Tag = `${tag}`; 
-    const classNames = `ds-text ${size} ${boldness}`;
+    const classNames = `ds-text ${size} ${boldness} ${align} ${className ? className : ''}`;
     return <Tag className={classNames}>
         {children}
     </Tag>
