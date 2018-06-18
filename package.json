@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/addon-notes": "^3.4.7",
     "autoprefixer": "7.1.6",
-    "babel-core": "6.26.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "7.1.2",
@@ -41,9 +41,8 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "start": "node scripts/start.js",
-    "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -88,6 +87,8 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "@storybook/react": "git@github.com:storybooks/storybook.git",
+    "babel-core": "^6.26.0",
     "css-loader": "^0.28.7",
     "node-sass": "^4.7.1",
     "sass-loader": "^6.0.6",
